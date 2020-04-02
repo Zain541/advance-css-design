@@ -30,5 +30,39 @@ body{
     url(../img/hero.jpg);
     background-size: cover;
     background-position: top; /*background image will be cropped except top position*/
-    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%); /* get more designs here https://bennettfeely.com/clippy/ */
+    position: relative;
+}
+
+.logo-box{
+    position: absolute;
+    top: 40px; /* it calculates the position from its parent element which has its position to relative. Same goes with left attribute*/
+    left: 40px;
+}
+
+.logo{
+    height: 35px;
+}
+.text-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); /*The translate() method moves an element from its current position (according to the parameters given for the X-axis and the Y-axis).*/
+}
+
+.heading-primary{
+    color: #fff;
+    text-transform: uppercase;
+}
+.heading-primary-main{
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+}
+.heading-primary-sub{
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 17.4px;
 }
