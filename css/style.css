@@ -4,14 +4,17 @@ Light green: #7ed56f
 Light green: #55c57a
 Light green: #28b485
 */
-* {
+*
+*::after,
+*::before
+{
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /*border and padding are not added to the container */
-
+    box-sizing: inherit;
 }
+/* Important: rem are not supported below internet explorer 9 */
 html{
-    font-size: 10px;
+    font-size: 62.5%;
 }
 body{
     font-family: "Lato", sans-serif;
@@ -20,6 +23,8 @@ body{
     line-height: 1.7; /*it means that the line height 1.7 times bigger than the origin height. Line height means the height of text line*/
     color: #777;
     padding: 3rem;
+    box-sizing: border-box; /*border and padding are not added to the container */
+
 }
 
 .header{
