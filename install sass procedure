@@ -1,0 +1,4 @@
+firts install node js
+open terminal and go to the project folder
+enter command "npm init" and enter values for fields
+run command "npm install node-sass --save-dev"
