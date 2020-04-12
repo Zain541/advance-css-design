@@ -4,7 +4,7 @@
   "description": "Landing page for natours",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,11 @@
   "homepage": "https://github.com/Zain541/advance-css-design#readme",
   "devDependencies": {
     "node-sass": "^4.13.1"
+  },
+  "dependencies": {
+    "g": "^2.0.1",
+    "live": "^0.1.25-beta.0",
+    "live-server": "^1.2.1",
+    "server": "^1.0.27"
   }
 }

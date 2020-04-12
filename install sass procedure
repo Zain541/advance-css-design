@@ -2,3 +2,14 @@ firts install node js
 open terminal and go to the project folder
 enter command "npm init" and enter values for fields
 run command "npm install node-sass --save-dev"
+
+INSTALL JQUERY
+npm install jquery --save 
+UNINSTALL JQUERY
+npm uninstall jquery --save
+
+COMPILE SASS
+npm run compile:sass
+
+INSTALL LIVE SERVER
+npm install -g live-server
