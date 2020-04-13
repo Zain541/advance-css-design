@@ -1,0 +1,38 @@
+.header {
+    height: 95vh; /*it means that the 95% of window height*/
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.8),
+        rgba($color-primary-dark, 0.8)
+      ),
+      url(../img/hero.jpg);
+    background-size: cover;
+    background-position: top; /*background image will be cropped except top position*/
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 75vh,
+      0 100%
+    ); /* get more designs here https://bennettfeely.com/clippy/ */
+    position: relative;
+  
+    &__logo-box {
+      position: absolute;
+      top: 4rem; /* it calculates the position from its parent element which has its position to relative. Same goes with left attribute*/
+      left: 4rem;
+    }
+  
+    &__logo {
+      height: 3.5rem;
+    }
+    &__text-box {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(
+        -50%,
+        -50%
+      ); /*The translate() method moves an element from its current position (according to the parameters given for the X-axis and the Y-axis).*/
+      text-align: center;
+    }
+  }

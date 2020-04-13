@@ -10,66 +10,8 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 1.6rem;
-  line-height: 1.7;
-  /*it means that the line height 1.7 times bigger than the origin height. Line height means the height of text line*/
-  color: #777;
-  padding: 3rem;
   box-sizing: border-box;
   /*border and padding are not added to the container */ }
-
-.header {
-  height: 95vh;
-  /*it means that the 95% of window height*/
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
-  background-size: cover;
-  background-position: top;
-  /*background image will be cropped except top position*/
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  /* get more designs here https://bennettfeely.com/clippy/ */
-  position: relative; }
-  .header__logo-box {
-    position: absolute;
-    top: 4rem;
-    /* it calculates the position from its parent element which has its position to relative. Same goes with left attribute*/
-    left: 4rem; }
-  .header__logo {
-    height: 3.5rem; }
-  .header__text-box {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /*The translate() method moves an element from its current position (according to the parameters given for the X-axis and the Y-axis).*/
-    text-align: center; }
-
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-  backface-visibility: hidden !important;
-  margin-bottom: 6rem; }
-  .heading-primary--main {
-    display: block;
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
-    animation-name: moveInLeft;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    /* Animations start slowly then ends up fastly */
-    /*
-        animation-iteration-count: 3;  number of times the animation would run
-        animation-delay: 3s; animation would run after 3 seconds
-        */ }
-  .heading-primary--sub {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.75rem;
-    animation: moveInRight 1s ease-out;
-    /*Combining all three in single command*/ }
 
 @keyframes moveInLeft {
   0% {
@@ -99,6 +41,41 @@ body {
   100% {
     opacity: 1;
     transform: translate(0); } }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  /*it means that the line height 1.7 times bigger than the origin height. Line height means the height of text line*/
+  color: #777;
+  padding: 3rem; }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden !important;
+  margin-bottom: 6rem; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    /* Animations start slowly then ends up fastly */
+    /*
+          animation-iteration-count: 3;  number of times the animation would run
+          animation-delay: 3s; animation would run after 3 seconds
+          */ }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    animation: moveInRight 1s ease-out;
+    /*Combining all three in single command*/ }
 
 .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -146,3 +123,28 @@ body {
   animation: moveInBottom 0.5s ease-out 0.75s;
   /* animation name, animation duration, animation timing function and animation delay*/
   animation-fill-mode: backwards; }
+
+.header {
+  height: 95vh;
+  /*it means that the 95% of window height*/
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  /*background image will be cropped except top position*/
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  /* get more designs here https://bennettfeely.com/clippy/ */
+  position: relative; }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    /* it calculates the position from its parent element which has its position to relative. Same goes with left attribute*/
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*The translate() method moves an element from its current position (according to the parameters given for the X-axis and the Y-axis).*/
+    text-align: center; }
