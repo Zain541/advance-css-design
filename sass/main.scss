@@ -1,70 +1,76 @@
-$color-primary:#55c57a;
-$color-primary-light:#7ed56f;
-$color-primary-dark:#28b485;
-$color-grey-dark:#777;
-$color-white:#fff;
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+$color-grey-dark: #777;
+$color-white: #fff;
+$color-black: #000;
 *,
 *::after,
-*::before
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 /* Important: rem are not supported below internet explorer 9 */
-html{
-    font-size: 62.5%;
+html {
+  font-size: 62.5%;
 }
-body{
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    font-size: 1.6rem;
-    line-height: 1.7; /*it means that the line height 1.7 times bigger than the origin height. Line height means the height of text line*/
-    color: $color-grey-dark;
-    padding: 3rem;
-    box-sizing: border-box; /*border and padding are not added to the container */
-
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7; /*it means that the line height 1.7 times bigger than the origin height. Line height means the height of text line*/
+  color: $color-grey-dark;
+  padding: 3rem;
+  box-sizing: border-box; /*border and padding are not added to the container */
 }
 
-.header{
-    height: 95vh; /*it means that the 95% of window height*/
-    background-image:
-    linear-gradient(
-        to right bottom,
-        rgba($color-primary-light, 0.8),
-        rgba($color-primary-dark, 0.8)
+.header {
+  height: 95vh; /*it means that the 95% of window height*/
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
     ),
     url(../img/hero.jpg);
-    background-size: cover;
-    background-position: top; /*background image will be cropped except top position*/
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /* get more designs here https://bennettfeely.com/clippy/ */
-    position: relative;
-}
+  background-size: cover;
+  background-position: top; /*background image will be cropped except top position*/
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 75vh,
+    0 100%
+  ); /* get more designs here https://bennettfeely.com/clippy/ */
+  position: relative;
 
-.header__logo-box{
+  &__logo-box {
     position: absolute;
     top: 4rem; /* it calculates the position from its parent element which has its position to relative. Same goes with left attribute*/
     left: 4rem;
-}
+  }
 
-.header__logo{
+  &__logo {
     height: 3.5rem;
-}
-.header__text-box{
+  }
+  &__text-box {
     position: absolute;
     top: 40%;
     left: 50%;
-    transform: translate(-50%,-50%); /*The translate() method moves an element from its current position (according to the parameters given for the X-axis and the Y-axis).*/
+    transform: translate(
+      -50%,
+      -50%
+    ); /*The translate() method moves an element from its current position (according to the parameters given for the X-axis and the Y-axis).*/
     text-align: center;
+  }
 }
 
-.heading-primary{
-    color: $color-white;
-    text-transform: uppercase;
-    backface-visibility: hidden !important;
-    margin-bottom: 6rem;
-}
-.heading-primary--main{
+.heading-primary {
+  color: $color-white;
+  text-transform: uppercase;
+  backface-visibility: hidden !important;
+  margin-bottom: 6rem;
+
+  &--main {
     display: block;
     font-size: 6rem;
     font-weight: 400;
@@ -74,65 +80,67 @@ body{
     animation-timing-function: ease-out; /* Animations start slowly then ends up fastly */
 
     /*
-    animation-iteration-count: 3;  number of times the animation would run
-    animation-delay: 3s; animation would run after 3 seconds
-    */
-}
-.heading-primary--sub{
+        animation-iteration-count: 3;  number of times the animation would run
+        animation-delay: 3s; animation would run after 3 seconds
+        */
+  }
+  &--sub {
     display: block;
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 1.75rem;
     animation: moveInRight 1s ease-out; /*Combining all three in single command*/
+  }
 }
+
 @keyframes moveInLeft {
-    0%{
-        opacity: 0;
-        transform: translateX(-10rem); /*rotate(180deg) we can also rotate the element */
-    }
+  0% {
+    opacity: 0;
+    transform: translateX(
+      -10rem
+    ); /*rotate(180deg) we can also rotate the element */
+  }
 
-    80%{
-        transform: translateX(1rem);
-    }
+  80% {
+    transform: translateX(1rem);
+  }
 
-    100%{
-        opacity: 1;
-        transform: translate(0);
-
-    }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }
 
 @keyframes moveInRight {
-    0%{
-        opacity: 0;
-        transform: translateX(10rem);
-    }
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
 
-    80%{
-        transform: translateX(-1rem);
-    }
+  80% {
+    transform: translateX(-1rem);
+  }
 
-    100%{
-        opacity: 1;
-        transform: translate(0);
-
-    }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }
 @keyframes moveInBottom {
-    0%{
-        opacity: 0;
-        transform: translateY(3rem);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
 
-    100%{
-        opacity: 1;
-        transform: translate(0);
-
-    }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }
 
-.btn:link,
-.btn:visited{
+.btn {
+  &:link,
+  &:visited {
     text-transform: uppercase;
     text-decoration: none;
     padding: 1.5rem 4rem; /* If there are two values then the first on would be top & bottom and the second would be left % right. If there are four values then 1:top, 2:right, 3:bottom and 4:left. Clock wise */
@@ -140,29 +148,37 @@ body{
     border-radius: 10rem;
     transition: all 0.2s; /*The transition effect will start when the specified CSS property changes value.*/
     position: relative;
-}
+  }
 
-.btn:hover{
+  &:hover {
     transform: translateY(-3px);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);    
-}
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
 
-.btn:active{
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6); /* When it hovers in then the after part actually grows upto 1.5% but due to the 0 opacity it seems that it fades out which in actual case executing opacity to 0. When it hovers out the same process runs with the backward effect*/
+      opacity: 0;
+    }
+  }
+
+  &:active {
     transform: translateY(-1px);
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);    
-}
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+  }
 
-.btn--white{
+  &--white {
     background-color: $color-white;
     color: $color-grey-dark;
 
-}
+    &::after {
+      background-color: $color-white;
+    }
+  }
 
-.btn::after{
-    content:"";
-    display:inline-block;
+  &::after {
+    content: "";
+    display: inline-block;
     width: 100%;
-    height:100%;
+    height: 100%;
     position: absolute;
     position: absolute;
     top: 0rem;
@@ -170,16 +186,10 @@ body{
     z-index: -1;
     border-radius: 10rem;
     transition: all 0.4s;
-}
+  }
 
-.btn--white::after{
-    background-color: $color-white;
-}
-.btn:hover::after{
-    transform: scaleX(1.4) scaleY(1.6); /* When it hovers in then the after part actually grows upto 1.5% but due to the 0 opacity it seems that it fades out which in actual case executing opacity to 0. When it hovers out the same process runs with the backward effect*/
-    opacity: 0; 
-}
-.btn--animated{
-    animation: moveInBottom 0.5s ease-out .75s; /* animation name, animation duration, animation timing function and animation delay*/
+  &--animated {
+    animation: moveInBottom 0.5s ease-out 0.75s; /* animation name, animation duration, animation timing function and animation delay*/
     animation-fill-mode: backwards;
+  }
 }

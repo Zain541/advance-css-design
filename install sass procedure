@@ -10,6 +10,7 @@ npm uninstall jquery --save
 
 COMPILE SASS
 npm run compile:sass
+npm run compile:sass --watch (for live)
 
 INSTALL LIVE SERVER
 npm install -g live-server
