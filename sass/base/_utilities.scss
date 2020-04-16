@@ -1,6 +1,12 @@
 .u-center-text {
   text-align: center; //inline-block element is treated as a text so we can wrap it inside a new div and add the 'text-align:center' property to that div
 }
-.u-margin-bottom-8 {
+.u-margin-bottom-medium {
+    margin-bottom: 4rem;// we may use this later
+  }
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem;
+}
+.u-margin-bottom-big {
   margin-bottom: 8rem;
 }
