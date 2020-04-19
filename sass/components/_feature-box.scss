@@ -1,0 +1,28 @@
+.feature-box {
+  background-color: rgba(
+    $color-white,
+    0.8
+  ); //it means that the white color opacity is 80% and the content we would be able to see it 20%
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 1.5 4rem rgba($color-black, 0.15);
+  transition: all 0.3s;
+  &__icon {
+    font-size: 6rem; // its actually a font
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    background-image: linear-gradient(
+      to right,
+      $color-primary-light,
+      $color-primary-dark
+    );
+    -webkit-background-clip: text; //it will add background image effect on the text
+    color: transparent; //because we want to see the effect of background image. if it's not transparent then the background effect will go behind the color of the text
+  }
+
+  &:hover{
+      transform: translateY(-1.4rem) scale(1.03);
+  }
+}
