@@ -18,6 +18,14 @@
 
   & > * // '>' means the direct child not all the children. In this case its just th row.
   {
-    transform: skewY(7deg); // we skewed the row here because if in case we need to add some extra elements then we don't need to skew all the children of the feature section
+    transform: skewY(
+      7deg
+    ); // we skewed the row here because if in case we need to add some extra elements then we don't need to skew all the children of the feature section
   }
+}
+
+.section-tours {
+  background-color: $color-grey-light-1;
+  padding: 25rem 0 50rem 0;
+  margin-top: -10rem;
 }

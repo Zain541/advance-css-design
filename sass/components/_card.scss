@@ -1,0 +1,41 @@
+.card {
+  perspective: 150rem; //The perspective property is used to give a 3D-positioned element some perspective.
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 50rem;// on adding the position absolute to the child element '.card__side the height of this element collapsed and perspective is gone. In floating we use clear fixes but in positioning absolute we assign same height to the parent element which its children have'
+
+  &__side {
+    height: 50rem;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; //to parent
+    backface-visibility: hidden; //hides the backpart
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+    &--front {
+      background-color: $color-white;
+    }
+
+    &--back {
+      transform: rotateY(180deg);
+
+      &-1{
+        background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+      }
+    }
+  }
+
+  &:hover &__side--front {
+    // .card:hover .card__side--front when we hover the card then the card side will be transformed. We don't put hover on the card side. hover parent affects the child
+    transform: rotateY(180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0);
+
+    //
+  }
+}
