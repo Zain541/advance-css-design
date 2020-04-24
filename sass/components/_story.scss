@@ -27,6 +27,7 @@
     transform: translateX(-4rem) scale(1.4);
     backface-visibility: hidden;
     transition: all .5s;
+    overflow: hidden;
   }
 
   &__text {
