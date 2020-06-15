@@ -7,6 +7,12 @@
     left: 0;
     z-index: 9999;
     background-color: rgba($color-black, .8);
+
+    opacity: 0; // we aren't using display:none here because we can't add animations then
+    visibility: hidden; // we aren't using display:none here because we can't add animations then
+    transition: all .3s;
+
+    
     &__content{
         @include absCenter;
         width: 75%;
@@ -15,6 +21,9 @@
         border-radius: 3px;
         display: table;
         overflow: hidden;
+        opacity: 0;
+        transform: translate(-50%,-50%) scale(.25);
+        transition: all .5s .2s;// .2s is the delay to
     }
 
     &__left
@@ -46,7 +55,7 @@
         -moz-column-gap: 4rem; 
         -moz-column-rule: 1px solid $color-grey-light-2;
 
-        column-count: 2;
+        column-count: 2; //because of display:table to give the equal height
         column-gap: 4rem; 
         column-rule: 1px solid $color-grey-light-2;
 
@@ -54,5 +63,35 @@
         -ms-hyphens: auto;
         -webkit-hyphens: auto;
         hyphens: auto;
+    }
+
+    // open states
+    &:target{
+        opacity: 1;
+        visibility: visible;
+    }
+    &:target &__content{
+        opacity: 1;
+        transform: translate(-50%,-50%) scale(1);
+    }
+
+    &__close{
+        &:link,
+        &:visited
+        {
+            color: $color-grey-dark;
+            position: absolute;
+            top: 2.5rem;
+            right: 2.5rem;
+            font-size: 3rem;
+            text-decoration: none;
+            display: inline-block;
+            transition: all .2s;
+            line-height: 1;
+        }
+
+        &:hover{
+            color: $color-primary;
+        }
     }
 }
