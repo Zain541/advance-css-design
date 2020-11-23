@@ -15,7 +15,7 @@ html {
     font-size: 56.25%; // 1rem = 9px; 9/16 x 100 = 56.25%
   }
 
-  @include respond(tab-port) { // width < 900?
+  @include respond(tab-port) { // width < 900? 
     font-size: 50%; // 1rem = 8px; 8/16 x 100 = 50%
   }
 // this is how we apply the order of media queries. The larger ones should come up
