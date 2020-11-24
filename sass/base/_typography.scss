@@ -4,7 +4,6 @@ body {
   font-size: 1.6rem;
   line-height: 1.7; /*it means that the line height 1.7 times bigger than the origin height. Line height means the height of text line*/
   color: $color-grey-dark;
-  padding: 3rem;
 }
 
 .heading-primary {
@@ -22,6 +21,10 @@ body {
     animation-duration: 1s;
     animation-timing-function: ease-out; /* Animations start slowly then ends up fastly */
 
+    @include respond(phone){
+      letter-spacing: 1rem;
+      font-family: 5rem;
+    }
     /*
           animation-iteration-count: 3;  number of times the animation would run
           animation-delay: 3s; animation would run after 3 seconds
@@ -33,6 +36,10 @@ body {
     font-weight: 700;
     letter-spacing: 1.75rem;
     animation: moveInRight 1s ease-out; /*Combining all three in single command*/
+  
+    @include respond(phone){
+      letter-spacing: .5rem;
+    }
   }
 }
 .heading-secondary {
@@ -45,6 +52,14 @@ body {
   color: transparent; //because we want to see the effect of background image. if it's not transparent then the background effect will go behind the color of the text
   transition: all .2s;
   letter-spacing: 0.2rem;
+
+  @include respond(tab-port){
+    font-size: 3rem;
+  }
+
+  @include respond(phone){
+    font-size: 2.5rem;
+  }
 
   &:hover{
     transform: skewY(2deg) skewX(15deg) scale(1.1);

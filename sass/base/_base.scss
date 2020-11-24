@@ -18,11 +18,16 @@ html {
   @include respond(tab-port) { // width < 900? 
     font-size: 50%; // 1rem = 8px; 8/16 x 100 = 50%
   }
-// this is how we apply the order of media queries. The larger ones should come up
+// this is how we apply the order of media queries. The larger ones should come up. Because when two media queries are applied then the last one is used
   @include respond(big-desktop) {
     font-size: 75%; // 1rem = 12px; 12/16 x 100 = 75%
   }
 }
 body {
   box-sizing: border-box; /*border and padding are not added to the container */
+  padding: 3rem;
+
+  @include respond(tab-port) { 
+   padding: 0;
+  }
 }

@@ -21,6 +21,21 @@
       0 100%
     ); /* get more designs here https://bennettfeely.com/clippy/ */
     position: relative;
+
+    @include respond(phone){
+      -webkit-clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 85vh,
+      0 100%
+    ); /* get more designs here https://bennettfeely.com/clippy/ */
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 85vh,
+      0 100%
+    ); /* get more designs here https://bennettfeely.com/clippy/ */
+    }
   
     &__logo-box {
       position: absolute;
